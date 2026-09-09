@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    background: #111111;
+    border-bottom: 2px solid #ff7200;
+    padding: 18px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.marca {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: #ff7200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.marca h1 {
+    color: #ff7200;
+    font-size: 24px;
+}
+
+.marca p {
+    color: #999999;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 15px 60px;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 35px 10px 25px;
+}
+
+.hero-icone {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.hero p {
+    color: #999999;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+/* =========================
+   LOCALIZAÇÃO
+========================= */
+
+.localizacao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    padding: 18px;
+    margin-bottom: 12px;
+}
+
+.localizacao .icone {
+    font-size: 30px;
+}
+
+.localizacao strong {
+    display: block;
+    color: #ff7200;
+    margin-bottom: 5px;
+}
+
+.localizacao p {
+    color: #bbbbbb;
+    line-height: 1.5;
+}
+
+/* =========================
+   BOTÕES PRINCIPAIS
+========================= */
+
+.botao-principal,
+.botao-comanda,
+.botao-mapa,
+.botao-whatsapp {
+    display: flex;
+    width: 100%;
+    min-height: 55px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-principal {
+    background: #ff7200;
+    color: #ffffff;
+}
+
+.botao-principal:hover {
+    background: #ff8a2b;
+}
+
+.botao-comanda {
+    background: #191919;
+    border: 1px solid #ff7200;
+    color: #ff7200;
+}
+
+.botao-comanda:hover {
+    background: #ff7200;
+    color: #ffffff;
+}
+
+.botao-mapa {
+    background: #202020;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+.botao-mapa:hover {
+    border-color: #ff7200;
+    color: #ff7200;
+}
+
+.botao-whatsapp {
+    background: #ff7200;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.botao-whatsapp:hover {
+    background: #ff8a2b;
+}
+
+/* =========================
+   VOLTAR
+========================= */
+
+.botao-voltar {
+    background: transparent;
+    border: 1px solid #333333;
+    color: #cccccc;
+    border-radius: 10px;
+    padding: 11px 17px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.botao-voltar:hover {
+    border-color: #ff7200;
+    color: #ff7200;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.titulo > span {
+    font-size: 35px;
+}
+
+.titulo h2 {
+    font-size: 27px;
+}
+
+.titulo p {
+    color: #888888;
+    margin-top: 4px;
+}
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.categorias button {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 17px 8px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.2s;
+}
+
+.categorias button span {
+    display: block;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.categorias button:hover {
+    border-color: #ff7200;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.categoria-produtos {
+    margin-bottom: 25px;
+}
+
+.categoria-produtos h3 {
+    color: #ff7200;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 9px;
+}
+
+.produto strong {
+    display: block;
+    font-size: 16px;
+}
+
+.produto span {
+    display: block;
+    color: #ff7200;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.produto button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background: #ff7200;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background: #ff8a2b;
+}
+
+/* =========================
+   COMANDA
+========================= */
+
+.lista-comanda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comanda-vazia {
+    text-align: center;
+    background: #151515;
+    border: 1px dashed #444444;
+    border-radius: 15px;
+    padding: 40px 20px;
+    color: #888888;
+}
+
+.comanda-vazia span {
+    display: block;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.item-comanda {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.item-comanda-topo {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item-comanda strong {
+    font-size: 16px;
+}
+
+.item-preco {
+    color: #ff7200;
+    font-weight: bold;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.controles button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    background: #202020;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.controles button:hover {
+    background: #ff7200;
+}
+
+.controles .remover {
+    margin-left: auto;
+    background: #8f2020;
+    border-color: #8f2020;
+}
+
+/* =========================
+   TOTAL
+========================= */
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #151515;
+    border: 1px solid #ff7200;
+    border-radius: 13px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.total span {
+    color: #aaaaaa;
+}
+
+.total strong {
+    color: #ff7200;
+    font-size: 25px;
+}
+
+/* =========================
+   OBSERVAÇÃO
+========================= */
+
+.observacao {
+    margin-top: 18px;
+}
+
+.observacao label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.observacao textarea {
+    width: 100%;
+    min-height: 90px;
+    resize: vertical;
+    background: #151515;
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 13px;
+    outline: none;
+}
+
+.observacao textarea:focus {
+    border-color: #ff7200;
+}
+
+/* =========================
+   SUCESSO
+========================= */
+
+.sucesso {
+    text-align: center;
+    background: #151515;
+    border: 1px solid #ff7200;
+    border-radius: 18px;
+    padding: 45px 20px;
+}
+
+.check {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background: #ff7200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.sucesso h2 {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.sucesso p {
+    color: #999999;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #111111;
+    border-top: 1px solid #292929;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+footer strong {
+    display: block;
+    color: #ff7200;
+    margin-bottom: 7px;
+}
+
+footer span {
+    display: block;
+    color: #777777;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .marca h1 {
+        font-size: 20px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .categorias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .categorias button {
+        padding: 14px 5px;
+    }
+
+    .titulo h2 {
+        font-size: 24px;
+    }
+
+}
